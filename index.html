@@ -3,38 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Hands-On Idaho</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Hands-On Idaho</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
-  <header class="bg-[#0a1c3b] text-white p-6 text-center">
-    <img src="logo.png" alt="Hands-On Idaho Logo" class="mx-auto h-20 mb-4">
-    <nav class="space-x-4">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="services.html" class="hover:underline">Services</a>
-      <a href="portfolio.html" class="hover:underline">Portfolio</a>
-      <a href="contact.html" class="hover:underline">Contact</a>
-      <a href="https://www.instagram.com/handsonidaho?igsh=N3J2aWc5aHJwdXpu&utm_source=qr" target="_blank">📷</a>
-      <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank">📘</a>
+<body>
+  <header>
+    <img id="logo" alt="Hands-On Idaho Logo" style="max-height:100px;">
+    <script>
+      document.getElementById("logo").src = "logo.png";
+      document.getElementById("logo").onerror = function() {
+        this.src = "logo.PNG";
+      };
+    </script>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <main class="p-6 max-w-5xl mx-auto">
-<section class="text-center py-20 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
-  <h2 class="text-4xl font-bold mb-4">Reliable. Local. Tech-Forward.</h2>
-  <p class="mb-6 max-w-2xl mx-auto">
-    Locally owned Handyman service in Boise Idaho specializing in low-voltage systems, Automation,
-    Home Theatre, Networking, Security, Surveillance, Home Improvement, and Maintenance.
-  </p>
-  <a href="contact.html" class="bg-white text-blue-900 px-6 py-3 font-semibold rounded shadow hover:bg-gray-200">Request a Quote</a>
-</section>
-</main>
-  <footer class="bg-[#0a1c3b] text-white text-center p-4 mt-10">
-    <p>© 2025 Hands-On Idaho</p>
-    <p>
-      <a href="https://www.instagram.com/handsonidaho?igsh=N3J2aWc5aHJwdXpu&utm_source=qr" target="_blank" class="mx-2">Instagram</a> |
-      <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" class="mx-2">Facebook</a>
-    </p>
+  <main>
+    <h1>Index</h1>
+    <p>Content goes here...</p>
+  </main>
+  <footer>
+    <p>&copy; 2025 Hands-On Idaho</p>
   </footer>
 </body>
 </html>
