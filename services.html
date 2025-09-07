@@ -1,34 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hands-On Idaho</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Hands-On Idaho</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <img id="logo" alt="Hands-On Idaho Logo" style="max-height:100px;">
+<body class="bg-gray-100 text-gray-900 font-sans">
+  
+  <header class="bg-[#0a1c3b] text-white p-6 text-center">
+    <img id="logo" alt="Hands-On Idaho Logo" class="mx-auto mb-4" style="max-height:120px;">
     <script>
-      document.getElementById("logo").src = "logo.png";
-      document.getElementById("logo").onerror = function() {
-        this.src = "logo.PNG";
-      };
+      (function() {
+        var img = document.getElementById('logo');
+        img.src = 'logo.png';
+        img.onerror = function() { this.src = 'logo.PNG'; };
+      })();
     </script>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
+    <nav class="space-x-4 text-base md:text-lg">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="services.html" class="hover:underline">Services</a>
+      <a href="portfolio.html" class="hover:underline">Portfolio</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
     </nav>
+    <div class="mt-3 space-x-4">
+      <a href="https://www.instagram.com/handsonidaho?igsh=N3J2aWc5aHJwdXpu&utm_source=qr" target="_blank" aria-label="Instagram" title="Instagram">📷</a>
+      <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" aria-label="Facebook" title="Facebook">📘</a>
+    </div>
   </header>
-  <main>
-    <h1>Services</h1>
-    <p>Content goes here...</p>
-  </main>
-  <footer>
-    <p>&copy; 2025 Hands-On Idaho</p>
+
+  <main class="p-6 max-w-5xl mx-auto">
+<h2 class="text-3xl font-bold mb-6">Our Services</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div class="bg-white p-6 rounded shadow">
+    <h3 class="text-xl font-semibold mb-2">⚡ Low Voltage & Smart Systems</h3>
+    <ul class="list-disc list-inside space-y-2">
+      <li>Home automation setup</li>
+      <li>Home theatre installation</li>
+      <li>Networking solutions</li>
+      <li>Security & video surveillance</li>
+      <li>Access control systems</li>
+    </ul>
+  </div>
+  <div class="bg-white p-6 rounded shadow">
+    <h3 class="text-xl font-semibold mb-2">🛠️ General Handyman & Home Improvement</h3>
+    <ul class="list-disc list-inside space-y-2">
+      <li>Electrical work</li>
+      <li>Remodeling & maintenance</li>
+      <li>Yard work & cleanup</li>
+      <li>Custom projects — no task too big or small</li>
+    </ul>
+  </div>
+</div>
+</main>
+  <footer class="bg-[#0a1c3b] text-white text-center p-4 mt-10">
+    <p>© 2025 Hands-On Idaho</p>
+    <p class="mt-1">
+      <a href="https://www.instagram.com/handsonidaho?igsh=N3J2aWc5aHJwdXpu&utm_source=qr" target="_blank" class="mx-2 underline">Instagram</a> |
+      <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" class="mx-2 underline">Facebook</a>
+    </p>
   </footer>
 </body>
 </html>
