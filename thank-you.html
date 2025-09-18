@@ -8,13 +8,29 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
-  <div class="flex items-center justify-center h-screen">
-    <div class="bg-white p-10 rounded shadow text-center">
+<body class="bg-gray-100 text-gray-900 font-sans flex flex-col min-h-screen">
+
+  <!-- Main Section -->
+  <main class="flex-grow flex items-center justify-center">
+    <div class="bg-white p-10 rounded shadow text-center max-w-lg">
       <h1 class="text-3xl font-bold mb-4">✅ Thank You!</h1>
       <p class="mb-6">Your message has been sent. We’ll get back to you soon.</p>
-      <a href="index.html" class="bg-blue-900 text-white px-5 py-2 rounded shadow hover:bg-blue-800">Back to Home</a>
+      <div class="space-x-3">
+        <a href="index.html" class="bg-blue-900 text-white px-5 py-2 rounded shadow hover:bg-blue-800">Home</a>
+        <a href="portfolio.html" class="bg-gray-200 text-gray-900 px-5 py-2 rounded shadow hover:bg-gray-300">Portfolio</a>
+        <a href="services.html" class="bg-gray-200 text-gray-900 px-5 py-2 rounded shadow hover:bg-gray-300">Services</a>
+      </div>
     </div>
-  </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0a1c3b] text-white text-center p-4 mt-10">
+    <p>&copy; 2025 Hands-On Idaho</p>
+    <p class="mt-1">
+      <a href="https://www.instagram.com/handsonidaho" target="_blank" class="mx-2 underline">Instagram</a> |
+      <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" class="mx-2 underline">Facebook</a>
+    </p>
+  </footer>
+
 </body>
 </html>
