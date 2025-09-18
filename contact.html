@@ -9,17 +9,17 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
-  
+
   <!-- Top Bar -->
-  <div class="bg-gray-900 text-gray-100 text-sm">
+  <div class="bg-[#0a1c3b] text-gray-100 text-sm">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-2">
       <div class="space-x-4">
-        <a href="tel:+12088612302" class="hover:underline">Call: (208) 861-2302</a>
+        <a href="tel:2088612302" class="hover:underline">Call: (208) 861-2302</a>
         <span class="hidden sm:inline">|</span>
         <a href="mailto:handsonidaho@outlook.com" class="hover:underline">handsonidaho@outlook.com</a>
       </div>
       <div class="space-x-3 mt-2 sm:mt-0">
-        <a href="https://www.instagram.com/handsonidaho?igsh=N3J2aWc5aHJwdXpu&utm_source=qr" target="_blank" class="hover:underline">Instagram</a>
+        <a href="https://www.instagram.com/handsonidaho" target="_blank" class="hover:underline">Instagram</a>
         <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" class="hover:underline">Facebook</a>
       </div>
     </div>
@@ -41,19 +41,27 @@
       <a href="portfolio.html" class="hover:underline">Portfolio</a>
       <a href="contact.html" class="hover:underline">Contact</a>
     </nav>
-    <a href="contact.html" class="inline-block bg-white text-blue-900 px-5 py-2 font-semibold rounded shadow hover:bg-gray-200">Request a Quote</a>
+    <a href="contact.html" class="inline-block bg-white text-[#0a1c3b] px-5 py-2 font-semibold rounded shadow hover:bg-gray-200">Request a Quote</a>
   </header>
 
-  <!-- Main Content -->
+  <!-- Hero -->
+  <section class="text-center py-12 bg-[#0a1c3b] text-white">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Get in Touch</h1>
+    <p class="max-w-3xl mx-auto px-4">
+      Have a project in mind or need a quick repair? Contact Hands-On Idaho today.
+    </p>
+  </section>
+
+  <!-- Contact Form -->
   <main class="p-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-    <form id="contactForm" action="https://formspree.io/f/mzzaloqw" method="POST" class="space-y-4 max-w-xl bg-white p-6 rounded shadow">
+    <form id="contactForm" action="https://formspree.io/f/mzzaloqw" method="POST" class="space-y-4 max-w-xl bg-white p-6 rounded shadow mx-auto">
       <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded">
       <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 border rounded">
       <textarea name="message" placeholder="Your Message" required class="w-full p-2 border rounded h-32"></textarea>
-      <button type="submit" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800">Send Message</button>
+      <button type="submit" class="bg-[#0a1c3b] text-white px-4 py-2 rounded shadow hover:bg-blue-800">Send Message</button>
     </form>
-    <p class="mt-4">Or reach us directly at <strong>(208) 861-2302</strong> or
+    <p class="mt-6 text-center">
+      Or reach us directly at <strong>(208) 861-2302</strong> or
       <a href="mailto:handsonidaho@outlook.com" class="text-blue-700 underline">handsonidaho@outlook.com</a>
     </p>
   </main>
