@@ -1,41 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Hands-On Idaho</title>
   <meta name="description" content="Contact Hands-On Idaho: request a quote, call (208) 861-2302, or email handsonidaho@outlook.com.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact | Hands-On Idaho">
-  <meta property="og:description" content="Contact Hands-On Idaho: request a quote, call (208) 861-2302, or email handsonidaho@outlook.com.">
-  <meta property="og:url" content="https://handsonidaho.com/contact.html">
-  <meta property="og:image" content="https://handsonidaho.com/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact | Hands-On Idaho">
-  <meta name="twitter:description" content="Contact Hands-On Idaho: request a quote, call (208) 861-2302, or email handsonidaho@outlook.com.">
-  <meta name="twitter:image" content="https://handsonidaho.com/og-image.png">
-  <!-- Analytics (replace G-XXXXXXX with your GA4 ID if you enable Google Analytics) -->
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B5PNK5EFXL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-B5PNK5EFXL');
-</script>
-  <!-- Optional privacy-friendly analytics via Plausible (works if you set it up) -->
-  <script defer data-domain="handsonidaho.com" src="https://plausible.io/js/script.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
   
+  <!-- Top Bar -->
   <div class="bg-gray-900 text-gray-100 text-sm">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-2">
       <div class="space-x-4">
@@ -44,11 +19,13 @@
         <a href="mailto:handsonidaho@outlook.com" class="hover:underline">handsonidaho@outlook.com</a>
       </div>
       <div class="space-x-3 mt-2 sm:mt-0">
-        <a href="https://www.instagram.com/handsonidaho?igsh=N3J2aWc5aHJwdXpu&utm_source=qr" target="_blank" aria-label="Instagram" title="Instagram" class="hover:underline">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" aria-label="Facebook" title="Facebook" class="hover:underline">Facebook</a>
+        <a href="https://www.instagram.com/handsonidaho?igsh=N3J2aWc5aHJwdXpu&utm_source=qr" target="_blank" class="hover:underline">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" class="hover:underline">Facebook</a>
       </div>
     </div>
   </div>
+
+  <!-- Header -->
   <header class="bg-[#0a1c3b] text-white p-6 text-center">
     <img id="logo" alt="Hands-On Idaho Logo" class="mx-auto mb-4" style="max-height:120px;">
     <script>
@@ -67,23 +44,48 @@
     <a href="contact.html" class="inline-block bg-white text-blue-900 px-5 py-2 font-semibold rounded shadow hover:bg-gray-200">Request a Quote</a>
   </header>
 
+  <!-- Main Content -->
   <main class="p-6 max-w-5xl mx-auto">
-<h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-<form action="https://formspree.io/f/maylrgjp" method="POST" class="space-y-4 max-w-xl bg-white p-6 rounded shadow">
-  <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded">
-  <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 border rounded">
-  <textarea name="message" placeholder="Your Message" required class="w-full p-2 border rounded h-32"></textarea>
-  <button type="submit" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800">Send Message</button>
-</form>
-<p class="mt-4">Or reach us directly at <strong>(208) 861-2302</strong> or
-<a href="mailto:handsonidaho@outlook.com" class="text-blue-700 underline">handsonidaho@outlook.com</a></p>
-</main>
+    <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+    <form id="contactForm" action="https://formspree.io/f/xeolbndw" method="POST" class="space-y-4 max-w-xl bg-white p-6 rounded shadow">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded">
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 border rounded">
+      <textarea name="message" placeholder="Your Message" required class="w-full p-2 border rounded h-32"></textarea>
+      <button type="submit" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800">Send Message</button>
+    </form>
+    <p class="mt-4">Or reach us directly at <strong>(208) 861-2302</strong> or
+      <a href="mailto:handsonidaho@outlook.com" class="text-blue-700 underline">handsonidaho@outlook.com</a>
+    </p>
+  </main>
+
+  <!-- Footer -->
   <footer class="bg-[#0a1c3b] text-white text-center p-4 mt-10">
-    <p>© 2025 Hands-On Idaho</p>
+    <p>&copy; 2025 Hands-On Idaho</p>
     <p class="mt-1">
-      <a href="https://www.instagram.com/handsonidaho?igsh=N3J2aWc5aHJwdXpu&utm_source=qr" target="_blank" class="mx-2 underline">Instagram</a> |
+      <a href="https://www.instagram.com/handsonidaho" target="_blank" class="mx-2 underline">Instagram</a> |
       <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" class="mx-2 underline">Facebook</a>
     </p>
   </footer>
+
+  <!-- Success / Error Feedback -->
+  <script>
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        alert("✅ Thanks! Your message has been sent.");
+        form.reset();
+      } else {
+        alert("❌ Oops! Something went wrong. Please try again later.");
+      }
+    });
+  </script>
+
 </body>
 </html>
