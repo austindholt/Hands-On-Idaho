@@ -10,6 +10,18 @@
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans flex flex-col min-h-screen">
 
+  <!-- Header -->
+  <header class="bg-[#0a1c3b] text-white p-6 text-center">
+    <img id="logo" alt="Hands-On Idaho Logo" class="mx-auto mb-4" style="max-height:120px;">
+    <script>
+      (function() {
+        var img = document.getElementById('logo');
+        img.src = 'logo.png';
+        img.onerror = function() { this.src = 'logo.PNG'; };
+      })();
+    </script>
+  </header>
+
   <!-- Main Section -->
   <main class="flex-grow flex items-center justify-center">
     <div class="bg-white p-10 rounded shadow text-center max-w-lg">
