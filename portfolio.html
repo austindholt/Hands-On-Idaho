@@ -4,11 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Hands-On Idaho</title>
-  <meta name="description" content="Hands-On Idaho project portfolio — examples of security systems, access control upgrades, and home improvement work in Boise.">
+  <meta name="description" content="Hands-On Idaho project portfolio — examples of handyman, security systems, smart home upgrades, and home improvement work in Boise.">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Top Bar -->
+  <div class="bg-[#0a1c3b] text-gray-100 text-sm">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-2">
+      <div class="space-x-4">
+        <a href="tel:2088612302" class="hover:underline">Call: (208) 861-2302</a>
+        <span class="hidden sm:inline">|</span>
+        <a href="mailto:handsonidaho@outlook.com" class="hover:underline">handsonidaho@outlook.com</a>
+      </div>
+      <div class="space-x-3 mt-2 sm:mt-0">
+        <a href="https://www.instagram.com/handsonidaho" target="_blank" class="hover:underline">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" class="hover:underline">Facebook</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Header -->
   <header class="bg-[#0a1c3b] text-white p-6 text-center">
@@ -26,50 +41,37 @@
       <a href="portfolio.html" class="hover:underline">Portfolio</a>
       <a href="contact.html" class="hover:underline">Contact</a>
     </nav>
-    <a href="contact.html" class="inline-block bg-white text-blue-900 px-5 py-2 font-semibold rounded shadow hover:bg-gray-200">Request a Quote</a>
+    <a href="contact.html" class="inline-block bg-white text-[#0a1c3b] px-5 py-2 font-semibold rounded shadow hover:bg-gray-200">Request a Quote</a>
   </header>
 
-  <!-- Main Content -->
-  <main class="p-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6">Project Portfolio</h2>
-    <p class="mb-4 text-gray-700">Here are a few example projects. Replace these placeholders with your real project photos anytime.</p>
+  <!-- Hero -->
+  <section class="text-center py-12 bg-[#0a1c3b] text-white">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Project Portfolio</h1>
+    <p class="max-w-3xl mx-auto px-4">
+      Here are a few examples of our work. These placeholders can be replaced with your real project photos anytime.
+    </p>
+  </section>
 
+  <!-- Portfolio Grid -->
+  <main class="p-6 max-w-6xl mx-auto">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
       <!-- Project 1 -->
       <div class="bg-white p-3 rounded shadow">
         <img id="proj1" alt="Custom Security System Installation" class="rounded mb-2">
-        <p class="font-medium">Custom Security System Installation</p>
+        <p class="font-medium text-[#0a1c3b]">Custom Security System Installation</p>
       </div>
 
       <!-- Project 2 -->
       <div class="bg-white p-3 rounded shadow">
         <img id="proj2" alt="Smart Access Control Upgrade" class="rounded mb-2">
-        <p class="font-medium">Smart Access Control Upgrade</p>
+        <p class="font-medium text-[#0a1c3b]">Smart Access Control Upgrade</p>
       </div>
 
       <!-- Project 3 -->
       <div class="bg-white p-3 rounded shadow">
         <img id="proj3" alt="Yard Cleanup and Remodel" class="rounded mb-2">
-        <p class="font-medium">Yard Cleanup and Remodel</p>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="bg-white p-3 rounded shadow">
-        <img id="proj4" alt="Another Project Example" class="rounded mb-2">
-        <p class="font-medium">Another Project Example</p>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="bg-white p-3 rounded shadow">
-        <img id="proj5" alt="Home Theatre Install" class="rounded mb-2">
-        <p class="font-medium">Home Theatre Install</p>
-      </div>
-
-      <!-- Project 6 -->
-      <div class="bg-white p-3 rounded shadow">
-        <img id="proj6" alt="General Handyman Work" class="rounded mb-2">
-        <p class="font-medium">General Handyman Work</p>
+        <p class="font-medium text-[#0a1c3b]">Yard Cleanup and Remodel</p>
       </div>
 
     </div>
@@ -84,7 +86,7 @@
     </p>
   </footer>
 
-  <!-- Image Fallback Logic -->
+  <!-- Image Fallback Script -->
   <script>
     function loadWithFallback(id, base) {
       var img = document.getElementById(id);
@@ -94,11 +96,9 @@
         this.src = base + ".JPG";
       };
     }
-
-    // Load up to 6 projects now
-    for (let i = 1; i <= 6; i++) {
-      loadWithFallback("proj" + i, "project" + i);
-    }
+    loadWithFallback("proj1", "project1");
+    loadWithFallback("proj2", "project2");
+    loadWithFallback("proj3", "project3");
   </script>
 
 </body>
