@@ -47,7 +47,7 @@
   <!-- Main Content -->
   <main class="p-6 max-w-5xl mx-auto">
     <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-    <form id="contactForm" action="https://formspree.io/f/xeolbndw" method="POST" class="space-y-4 max-w-xl bg-white p-6 rounded shadow">
+    <form id="contactForm" action="https://formspree.io/f/mzzaloqw" method="POST" class="space-y-4 max-w-xl bg-white p-6 rounded shadow">
       <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded">
       <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 border rounded">
       <textarea name="message" placeholder="Your Message" required class="w-full p-2 border rounded h-32"></textarea>
@@ -67,7 +67,7 @@
     </p>
   </footer>
 
-  <!-- Success / Error Feedback -->
+  <!-- Success / Error Feedback with Redirect -->
   <script>
     const form = document.getElementById("contactForm");
     form.addEventListener("submit", async function(e) {
@@ -79,8 +79,7 @@
         headers: { 'Accept': 'application/json' }
       });
       if (response.ok) {
-        alert("✅ Thanks! Your message has been sent.");
-        form.reset();
+        window.location.href = "thank-you.html";
       } else {
         alert("❌ Oops! Something went wrong. Please try again later.");
       }
