@@ -18,15 +18,20 @@
   gtag('config', 'G-B5PNK5EFXL');
 </script>
 
-<title>Contact | Request a Quote from Hands-On Idaho</title>
-<meta name="description" content="Request a quote from Hands-On Idaho. Call or text (208) 861-2302, email handsonidaho@outlook.com, or send project details through the contact form." />
+<title>Contact Hands-On Idaho | Request a Boise Handyman Quote</title>
+<meta name="description" content="Request a quote from Hands-On Idaho for handyman repairs, installs, maintenance, small projects, and home tech help in Boise, Meridian, and the Treasure Valley." />
+<meta name="keywords" content="contact Boise handyman, request handyman quote, Hands-On Idaho phone, Treasure Valley home repair quote, Meridian handyman" />
 <link rel="canonical" href="https://handsonidaho.com/contact.html" />
+<meta property="og:site_name" content="Hands-On Idaho" />
+<meta property="og:locale" content="en_US" />
 <meta property="og:title" content="Contact | Hands-On Idaho" />
-<meta property="og:description" content="Request a quote for handyman, home improvement, maintenance, mounting, and tech-friendly home projects." />
+<meta property="og:description" content="Request a quote for handyman repairs, home improvement, maintenance, mounting, installs, and tech-friendly home projects." />
 <meta property="og:image" content="https://handsonidaho.com/og-image.png" />
 <meta property="og:url" content="https://handsonidaho.com/contact.html" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact | Hands-On Idaho" />
+<meta name="twitter:description" content="Send project details, photos, location, and timing for a Boise or Treasure Valley handyman quote." />
 </head>
 
 <body>
@@ -101,6 +106,7 @@
 
       <form id="contactForm" action="https://formspree.io/f/mzzaloqw" method="POST" class="quote-form">
         <input type="hidden" name="_subject" value="New Hands-On Idaho quote request" />
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="honeypot" aria-hidden="true" />
         <div class="form-row">
           <label for="name">Name *</label>
           <input id="name" type="text" name="name" autocomplete="name" required />
@@ -112,15 +118,15 @@
             <input id="email" type="email" name="email" autocomplete="email" required />
           </div>
           <div>
-            <label for="phone">Phone</label>
-            <input id="phone" type="tel" name="phone" autocomplete="tel" />
+            <label for="phone">Phone *</label>
+            <input id="phone" type="tel" name="phone" autocomplete="tel" required />
           </div>
         </div>
 
         <div class="form-row two">
           <div>
-            <label for="city">City / Area</label>
-            <input id="city" type="text" name="city" placeholder="Boise, Meridian, etc." />
+            <label for="city">City / Area *</label>
+            <input id="city" type="text" name="city" autocomplete="address-level2" placeholder="Boise, Meridian, etc." required />
           </div>
           <div>
             <label for="timeline">Timeline</label>
@@ -135,8 +141,8 @@
         </div>
 
         <div class="form-row">
-          <label for="projectType">Project Type</label>
-          <select id="projectType" name="project_type">
+          <label for="projectType">Project Type *</label>
+          <select id="projectType" name="project_type" required>
             <option value="">Select one</option>
             <option>Repair / punch list</option>
             <option>Mounting / install</option>
@@ -149,12 +155,12 @@
 
         <div class="form-row">
           <label for="message">Project Details *</label>
-          <textarea id="message" name="message" required placeholder="Tell me what you need done. Include measurements, product links, or anything unusual if you can."></textarea>
+          <textarea id="message" name="message" required placeholder="Tell me what you need done. Include photos you can email later, measurements, product links, access notes, parking/gate details, or anything unusual."></textarea>
         </div>
 
-        <button class="btn btn-primary form-button" type="submit">Send Request</button>
+        <button class="btn btn-primary form-button" type="submit">Request a Quote</button>
         <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
-        <p class="form-note">This form uses Formspree. You can also email photos directly to <a href="mailto:handsonidaho@outlook.com">handsonidaho@outlook.com</a>.</p>
+        <p class="form-note">This form sends through Formspree. For faster quoting, email photos directly to <a href="mailto:handsonidaho@outlook.com">handsonidaho@outlook.com</a> after submitting.</p>
       </form>
     </div>
   </section>

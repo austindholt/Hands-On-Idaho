@@ -34,6 +34,11 @@ This rebuild references those existing files.
 - Google Analytics ID: G-B5PNK5EFXL
 - Formspree contact form endpoint: https://formspree.io/f/mzzaloqw
 
+## Static-site checks
+- GitHub Pages should deploy from the `main` branch root so `index.html`, `CNAME`, `robots.txt`, and `sitemap.xml` are served at the domain root.
+- The contact form posts directly to Formspree from `contact.html`; `script.js` only updates the submit button/status text and does not block the native form submit.
+- Confirm the Formspree endpoint is configured to notify `handsonidaho@outlook.com` and, if desired, redirect successful submissions to `https://handsonidaho.com/thank-you.html`.
+
 ## Deploy through GitHub
 1. Go to your repo: `austindholt/Hands-On-Idaho`
 2. Upload/replace the files from this folder.

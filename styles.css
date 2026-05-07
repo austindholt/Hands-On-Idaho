@@ -195,6 +195,21 @@ a {
   transform: translateY(-1px);
 }
 
+.btn:focus-visible,
+.nav-link:focus-visible,
+.topbar a:focus-visible,
+.site-footer a:focus-visible,
+.mobile-call:focus-visible {
+  outline: 3px solid rgba(27, 92, 255, 0.32);
+  outline-offset: 3px;
+}
+
+.btn:disabled {
+  cursor: wait;
+  opacity: 0.78;
+  transform: none;
+}
+
 .btn-primary {
   background: var(--blue);
   color: var(--white);
@@ -734,6 +749,15 @@ textarea:focus {
   min-height: 24px;
   margin: 14px 0 0;
   font-weight: 800;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .form-status.success {

@@ -20,45 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const status = document.querySelector("#formStatus");
 
   if (form && status) {
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-
+    form.addEventListener("submit", () => {
       const button = form.querySelector("button[type='submit']");
-      const originalText = button ? button.textContent : "";
 
       if (button) {
         button.disabled = true;
         button.textContent = "Sending...";
       }
 
-      status.textContent = "";
+      status.textContent = "Sending your request securely...";
       status.className = "form-status";
-
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: new FormData(form),
-          headers: { "Accept": "application/json" }
-        });
-
-        if (response.ok) {
-          status.textContent = "Message sent. Redirecting...";
-          status.classList.add("success");
-          window.location.href = "thank-you.html";
-          return;
-        }
-
-        status.textContent = "Something went wrong. You can still call, text, or email directly.";
-        status.classList.add("error");
-      } catch (error) {
-        status.textContent = "Connection issue. Please call, text, or email directly.";
-        status.classList.add("error");
-      } finally {
-        if (button) {
-          button.disabled = false;
-          button.textContent = originalText;
-        }
-      }
     });
   }
 });
