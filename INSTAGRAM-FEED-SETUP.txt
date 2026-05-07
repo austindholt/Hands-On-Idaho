@@ -1,0 +1,15 @@
+# Instagram Feed Widget Setup for Hands-On Idaho
+
+The Elfsight Instagram widget has already been added to `portfolio.html`.
+
+Widget ID:
+`elfsight-app-6a6cd05b-b74e-43bd-b657-3d56ec7a6090`
+
+The live section is titled **Latest Projects & Homeowner Tips**.
+
+If you ever want to replace the widget, open `portfolio.html` and replace this block:
+
+```html
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-6a6cd05b-b74e-43bd-b657-3d56ec7a6090" data-elfsight-app-lazy></div>
+```

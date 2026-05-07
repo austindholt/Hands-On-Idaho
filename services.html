@@ -1,98 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Hands-On Idaho</title>
-  <meta name="description" content="Hands-On Idaho services: handyman, low-voltage, home theatre, automation, networking, security, surveillance, access control, and general home improvement.">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#071833" />
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="stylesheet" href="styles.css" />
+<script defer src="script.js"></script>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5PNK5EFXL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-B5PNK5EFXL');
-  </script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B5PNK5EFXL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B5PNK5EFXL');
+</script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+<title>Services | Hands-On Idaho Handyman Services</title>
+<meta name="description" content="Hands-On Idaho services: home repairs, punch-list projects, mounting, installs, maintenance, yard cleanup, smart home setup, and tech-friendly handyman work in the Treasure Valley." />
+<link rel="canonical" href="https://handsonidaho.com/services.html" />
+<meta property="og:title" content="Services | Hands-On Idaho" />
+<meta property="og:description" content="Handyman, home improvement, maintenance, mounting, installs, and tech-friendly home upgrades in the Treasure Valley." />
+<meta property="og:image" content="https://handsonidaho.com/og-image.png" />
+<meta property="og:url" content="https://handsonidaho.com/services.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
 
-  <!-- Top Bar -->
-  <div class="bg-[#0a1c3b] text-gray-100 text-sm">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-2">
-      <div class="space-x-4">
-        <a href="tel:2088612302" class="hover:underline">Call: (208) 861-2302</a>
-        <span class="hidden sm:inline">|</span>
-        <a href="mailto:handsonidaho@outlook.com" class="hover:underline">handsonidaho@outlook.com</a>
-      </div>
-      <div class="space-x-3 mt-2 sm:mt-0">
-        <a href="https://www.instagram.com/handsonidaho" target="_blank" class="hover:underline">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" class="hover:underline">Facebook</a>
-      </div>
-    </div>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <a href="tel:12088612302">Call/Text: (208) 861-2302</a>
+    <span class="topbar-divider">|</span>
+    <a href="mailto:handsonidaho@outlook.com">handsonidaho@outlook.com</a>
+    <span class="topbar-spacer"></span>
+    <a href="https://www.instagram.com/handsonidaho" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" rel="noopener">Facebook</a>
   </div>
+</div>
 
-  <!-- Header -->
-  <header class="bg-[#0a1c3b] text-white p-6 text-center">
-    <img id="logo" alt="Hands-On Idaho Logo" class="mx-auto mb-4" style="max-height:120px;">
-    <script>
-      (function() {
-        var img = document.getElementById('logo');
-        img.src = 'logo.png';
-        img.onerror = function() { this.src = 'logo.PNG'; };
-      })();
-    </script>
-    <nav class="space-x-4 text-base md:text-lg mb-3">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="services.html" class="hover:underline">Services</a>
-      <a href="portfolio.html" class="hover:underline">Portfolio</a>
-      <a href="contact.html" class="hover:underline">Contact</a>
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="index.html" aria-label="Hands-On Idaho home">
+      <img src="logo.png" alt="Hands-On Idaho logo" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+      <span class="brand-fallback">Hands-On Idaho</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+      <span class="menu-toggle-line"></span>
+      <span class="menu-toggle-line"></span>
+      <span class="menu-toggle-line"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+<a href="services.html" class="nav-link active">Services</a>
+<a href="portfolio.html" class="nav-link">Portfolio</a>
+<a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html" class="btn btn-small btn-primary">Request a Quote</a>
     </nav>
-    <a href="contact.html" class="inline-block bg-white text-[#0a1c3b] px-5 py-2 font-semibold rounded shadow hover:bg-gray-200">Request a Quote</a>
-  </header>
+  </div>
+</header>
 
-  <!-- Hero -->
-  <section class="text-center py-12 bg-[#0a1c3b] text-white">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Our Services</h1>
-    <p class="max-w-3xl mx-auto px-4">
-      From smart home automation to general handyman work, Hands-On Idaho offers reliable, local service with tech-forward solutions.
-    </p>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container narrow">
+      <p class="eyebrow">What I do</p>
+      <h1>Handyman services for practical home projects.</h1>
+      <p>From quick repairs to custom problem solving, Hands-On Idaho helps Treasure Valley homeowners finish the projects that are too small, too weird, or too time-consuming to keep ignoring.</p>
+    </div>
   </section>
 
-  <!-- Services Grid -->
-  <main class="p-6 max-w-6xl mx-auto grid gap-8 md:grid-cols-2">
-    <div class="bg-white p-6 rounded shadow">
-      <h3 class="text-xl font-semibold mb-2 text-[#0a1c3b]">Low Voltage & Smart Systems</h3>
-      <ul class="list-disc list-inside space-y-1 text-gray-700">
-        <li>Home automation setup</li>
-        <li>Home theatre installation</li>
-        <li>Networking solutions</li>
-        <li>Security & video surveillance</li>
-        <li>Access control systems</li>
-      </ul>
-    </div>
-    <div class="bg-white p-6 rounded shadow">
-      <h3 class="text-xl font-semibold mb-2 text-[#0a1c3b]">General Handyman & Home Improvement</h3>
-      <ul class="list-disc list-inside space-y-1 text-gray-700">
-        <li>Electrical work</li>
-        <li>Remodeling & maintenance</li>
-        <li>Yard work & cleanup</li>
-        <li>Custom projects — no task too big or small</li>
-      </ul>
-    </div>
-  </main>
+  <section class="section">
+    <div class="container service-detail-grid">
+      <article class="detail-card">
+        <h2>Repairs & Punch-List Items</h2>
+        <p>Good for the little things that stack up around the house.</p>
+        <ul>
+          <li>Door, latch, hinge, and hardware adjustments</li>
+          <li>Trim, caulk, drywall, paint touch-up coordination</li>
+          <li>Cabinet pulls, towel bars, hooks, and small installs</li>
+          <li>General troubleshooting and practical repair planning</li>
+        </ul>
+      </article>
 
-  <!-- Footer -->
-  <footer class="bg-[#0a1c3b] text-white text-center p-4 mt-10">
-    <p>&copy; 2025 Hands-On Idaho</p>
-    <p class="mt-1">
-      <a href="https://www.instagram.com/handsonidaho" target="_blank" class="mx-2 underline">Instagram</a> |
-      <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" class="mx-2 underline">Facebook</a>
-    </p>
-  </footer>
+      <article class="detail-card">
+        <h2>Mounting, Assembly & Installs</h2>
+        <p>Clean installs that feel finished, level, and secure.</p>
+        <ul>
+          <li>TV mounting and basic cable cleanup</li>
+          <li>Shelving, curtain rods, mirrors, and wall-mounted items</li>
+          <li>Furniture assembly and garage storage</li>
+          <li>Fixture and hardware swaps where appropriate</li>
+        </ul>
+      </article>
+
+      <article class="detail-card">
+        <h2>Maintenance & Exterior Help</h2>
+        <p>Keep the outside of the house from becoming a bigger problem later.</p>
+        <ul>
+          <li>Yard cleanup and small exterior projects</li>
+          <li>Seasonal home walk-throughs</li>
+          <li>Gate, fence, garage, and exterior hardware checks</li>
+          <li>Basic preventative maintenance recommendations</li>
+        </ul>
+      </article>
+
+      <article class="detail-card">
+        <h2>Tech-Friendly Home Upgrades</h2>
+        <p>Modern home setup help without making it more complicated than it needs to be.</p>
+        <ul>
+          <li>Smart doorbells, smart switches, and smart-home setup</li>
+          <li>Wi-Fi/mesh network setup support</li>
+          <li>Home audio, TV, and device setup</li>
+          <li>Camera placement advice and customer-provided device installs</li>
+        </ul>
+      </article>
+
+      <article class="detail-card">
+        <h2>Custom Projects</h2>
+        <p>Some jobs do not fit neatly into one category — that’s usually where I can help.</p>
+        <ul>
+          <li>Small custom builds and practical modifications</li>
+          <li>Problem-solving around awkward spaces or old installs</li>
+          <li>Homeowner project support and second opinions</li>
+          <li>“Can you take a look at this?” type jobs</li>
+        </ul>
+      </article>
+
+      <article class="detail-card highlight">
+        <h2>Not Sure Where It Fits?</h2>
+        <p>Send a message with photos and a short description. If it’s a good fit, I’ll help you plan it. If it needs a licensed specialist or a bigger contractor, I’ll be honest about that.</p>
+        <a class="btn btn-primary" href="contact.html">Ask About a Project</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section soft-bg">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Scheduling</p>
+        <h2>Evening and weekend appointments are often available.</h2>
+        <p>Hands-On Idaho is built for real homeowners with real schedules. For the fastest estimate, include your location, photos, timeline, and what you’re hoping to accomplish.</p>
+      </div>
+      <div class="area-card">
+        <h3>Helpful quote details</h3>
+        <ul class="check-list">
+          <li>Photos of the area</li>
+          <li>Approximate measurements</li>
+          <li>Material or product links if you already picked something</li>
+          <li>Your city or neighborhood</li>
+          <li>Ideal timeline</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<section class="cta-strip">
+  <div class="container cta-strip-inner">
+    <div>
+      <p class="eyebrow">Ready when you are</p>
+      <h2>Have a repair, install, or punch-list project?</h2>
+      <p>Send the details and a few photos if you have them. I’ll let you know what I can help with and the best next step.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-light" href="contact.html">Request a Quote</a>
+      <a class="btn btn-ghost-light" href="tel:12088612302">Call/Text (208) 861-2302</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <img src="logo.png" alt="Hands-On Idaho logo" class="footer-logo" onerror="this.style.display='none';" />
+      <p class="footer-tagline">Reliable handyman and home improvement help for Boise, Meridian, and the Treasure Valley.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <a href="tel:12088612302">(208) 861-2302</a>
+      <a href="mailto:handsonidaho@outlook.com">handsonidaho@outlook.com</a>
+    </div>
+    <div>
+      <h3>Service Area</h3>
+      <p>Boise, Meridian, Eagle, Nampa, Kuna, Star, and nearby Treasure Valley areas.</p>
+    </div>
+    <div>
+      <h3>Social</h3>
+      <a href="https://www.instagram.com/handsonidaho" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Hands-On Idaho. All rights reserved.</p>
+    <p>Locally owned. Clear communication. Quality work.</p>
+  </div>
+</footer>
+
+<a class="mobile-call" href="tel:12088612302">Call/Text (208) 861-2302</a>
 
 </body>
 </html>

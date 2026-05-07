@@ -1,21 +1,58 @@
-# Hands-On Idaho — v3 (SEO + CTA + Analytics)
+# Hands-On Idaho — GitHub Pages Rebuild
 
-This version adds:
-- Click-to-call phone links and mailto email links
-- "Request a Quote" button on every page header
-- SEO meta + Open Graph + Twitter card with `og-image.png`
-- GA4 (placeholder 'G-XXXXXXX') and optional Plausible analytics loader
-- Logo filename fallback (works with `logo.png` or `logo.PNG`)
+This is a static GitHub Pages rebuild for Hands-On Idaho.
 
-## How to deploy
-1. Upload ALL files to your repo `austindholt/hands-on-idaho` (replace existing).
-2. Commit → wait ~1–2 minutes → refresh your site (or handsonidaho.com).
+## Files in this package
+- `index.html`
+- `services.html`
+- `portfolio.html`
+- `contact.html`
+- `thank-you.html`
+- `404.html`
+- `styles.css`
+- `script.js`
+- `robots.txt`
+- `sitemap.xml`
+- `CNAME`
 
-## Enable GA4
-- Replace `G-XXXXXXX` with your GA4 Measurement ID in the `<head>` of each page.
-- (Search for `G-XXXXXXX` to find both spots.)
+## Important
+Do not delete your existing image assets unless you are replacing them:
+- `logo.png`
+- `favicon.ico`
+- `og-image.png`
+- `project1.JPG`
+- `project2.JPG`
+- `project3.jpeg`
 
-## Edit share image
-- Update `og-image.png` if you want a different social preview image.
+This rebuild references those existing files.
 
-— Enjoy!
+## Preserved from your current site
+- Domain: `handsonidaho.com`
+- Phone: (208) 861-2302
+- Email: handsonidaho@outlook.com
+- Instagram and Facebook links
+- Google Analytics ID: G-B5PNK5EFXL
+- Formspree contact form endpoint: https://formspree.io/f/mzzaloqw
+
+## Deploy through GitHub
+1. Go to your repo: `austindholt/Hands-On-Idaho`
+2. Upload/replace the files from this folder.
+3. Keep existing image files in the repo.
+4. Commit changes to `main`.
+5. Wait a minute or two for GitHub Pages to update.
+6. Visit https://handsonidaho.com
+
+## Easy edit spots
+- Phone/email/social links are repeated in the HTML files.
+- Colors and layout are in `styles.css`.
+- Form behavior and mobile menu are in `script.js`.
+- Project photos are controlled in `portfolio.html`.
+
+
+## Instagram feed
+This version includes an Instagram widget section on `portfolio.html`.
+See `INSTAGRAM-FEED-SETUP.txt` for where to paste the widget code and how to configure it.
+
+
+## Instagram widget integrated
+The Elfsight Instagram widget has been added to `portfolio.html` using widget ID `6a6cd05b-b74e-43bd-b657-3d56ec7a6090`.

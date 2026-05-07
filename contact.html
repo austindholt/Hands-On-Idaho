@@ -1,108 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Hands-On Idaho</title>
-  <meta name="description" content="Contact Hands-On Idaho: request a quote, call (208) 861-2302, or email handsonidaho@outlook.com.">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#071833" />
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="stylesheet" href="styles.css" />
+<script defer src="script.js"></script>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5PNK5EFXL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-B5PNK5EFXL');
-  </script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B5PNK5EFXL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B5PNK5EFXL');
+</script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+<title>Contact | Request a Quote from Hands-On Idaho</title>
+<meta name="description" content="Request a quote from Hands-On Idaho. Call or text (208) 861-2302, email handsonidaho@outlook.com, or send project details through the contact form." />
+<link rel="canonical" href="https://handsonidaho.com/contact.html" />
+<meta property="og:title" content="Contact | Hands-On Idaho" />
+<meta property="og:description" content="Request a quote for handyman, home improvement, maintenance, mounting, and tech-friendly home projects." />
+<meta property="og:image" content="https://handsonidaho.com/og-image.png" />
+<meta property="og:url" content="https://handsonidaho.com/contact.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
 
-  <!-- Top Bar -->
-  <div class="bg-[#0a1c3b] text-gray-100 text-sm">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-2">
-      <div class="space-x-4">
-        <a href="tel:2088612302" class="hover:underline">Call: (208) 861-2302</a>
-        <span class="hidden sm:inline">|</span>
-        <a href="mailto:handsonidaho@outlook.com" class="hover:underline">handsonidaho@outlook.com</a>
-      </div>
-      <div class="space-x-3 mt-2 sm:mt-0">
-        <a href="https://www.instagram.com/handsonidaho" target="_blank" class="hover:underline">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" class="hover:underline">Facebook</a>
-      </div>
-    </div>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <a href="tel:12088612302">Call/Text: (208) 861-2302</a>
+    <span class="topbar-divider">|</span>
+    <a href="mailto:handsonidaho@outlook.com">handsonidaho@outlook.com</a>
+    <span class="topbar-spacer"></span>
+    <a href="https://www.instagram.com/handsonidaho" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" rel="noopener">Facebook</a>
   </div>
+</div>
 
-  <!-- Header -->
-  <header class="bg-[#0a1c3b] text-white p-6 text-center">
-    <img id="logo" alt="Hands-On Idaho Logo" class="mx-auto mb-4" style="max-height:120px;">
-    <script>
-      (function() {
-        var img = document.getElementById('logo');
-        img.src = 'logo.png';
-        img.onerror = function() { this.src = 'logo.PNG'; };
-      })();
-    </script>
-    <nav class="space-x-4 text-base md:text-lg mb-3">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="services.html" class="hover:underline">Services</a>
-      <a href="portfolio.html" class="hover:underline">Portfolio</a>
-      <a href="contact.html" class="hover:underline">Contact</a>
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="index.html" aria-label="Hands-On Idaho home">
+      <img src="logo.png" alt="Hands-On Idaho logo" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+      <span class="brand-fallback">Hands-On Idaho</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+      <span class="menu-toggle-line"></span>
+      <span class="menu-toggle-line"></span>
+      <span class="menu-toggle-line"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+<a href="services.html" class="nav-link">Services</a>
+<a href="portfolio.html" class="nav-link">Portfolio</a>
+<a href="contact.html" class="nav-link active">Contact</a>
+      <a href="contact.html" class="btn btn-small btn-primary">Request a Quote</a>
     </nav>
-    <a href="contact.html" class="inline-block bg-white text-[#0a1c3b] px-5 py-2 font-semibold rounded shadow hover:bg-gray-200">Request a Quote</a>
-  </header>
+  </div>
+</header>
 
-  <!-- Hero -->
-  <section class="text-center py-12 bg-[#0a1c3b] text-white">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Get in Touch</h1>
-    <p class="max-w-3xl mx-auto px-4">
-      Have a project in mind or need a quick repair? Contact Hands-On Idaho today.
-    </p>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container narrow">
+      <p class="eyebrow">Request a quote</p>
+      <h1>Tell me what you need help with.</h1>
+      <p>Send the details, your location, and any photos you have. I’ll get back to you with questions, availability, and the best next step.</p>
+    </div>
   </section>
 
-  <!-- Contact Form -->
-  <main class="p-6 max-w-5xl mx-auto">
-    <form id="contactForm" action="https://formspree.io/f/mzzaloqw" method="POST" class="space-y-4 max-w-xl bg-white p-6 rounded shadow mx-auto">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded">
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 border rounded">
-      <textarea name="message" placeholder="Your Message" required class="w-full p-2 border rounded h-32"></textarea>
-      <button type="submit" class="bg-[#0a1c3b] text-white px-4 py-2 rounded shadow hover:bg-blue-800">Send Message</button>
-    </form>
-    <p class="mt-6 text-center">
-      Or reach us directly at <strong>(208) 861-2302</strong> or
-      <a href="mailto:handsonidaho@outlook.com" class="text-blue-700 underline">handsonidaho@outlook.com</a>
-    </p>
-  </main>
+  <section class="section">
+    <div class="container contact-grid">
+      <div class="contact-card">
+        <h2>Contact Details</h2>
+        <p>Call, text, email, or use the form. Photos are usually the fastest way to get a useful answer.</p>
+        <div class="contact-methods">
+          <a href="tel:12088612302"><span>Phone/Text</span>(208) 861-2302</a>
+          <a href="mailto:handsonidaho@outlook.com"><span>Email</span>handsonidaho@outlook.com</a>
+        </div>
+        <div class="small-panel">
+          <h3>Good to include</h3>
+          <ul class="check-list">
+            <li>What you need done</li>
+            <li>City or neighborhood</li>
+            <li>Photos of the project area</li>
+            <li>Any measurements or product links</li>
+            <li>How soon you need it done</li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- Footer -->
-  <footer class="bg-[#0a1c3b] text-white text-center p-4 mt-10">
-    <p>&copy; 2025 Hands-On Idaho</p>
-    <p class="mt-1">
-      <a href="https://www.instagram.com/handsonidaho" target="_blank" class="mx-2 underline">Instagram</a> |
-      <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" class="mx-2 underline">Facebook</a>
-    </p>
-  </footer>
+      <form id="contactForm" action="https://formspree.io/f/mzzaloqw" method="POST" class="quote-form">
+        <input type="hidden" name="_subject" value="New Hands-On Idaho quote request" />
+        <div class="form-row">
+          <label for="name">Name *</label>
+          <input id="name" type="text" name="name" autocomplete="name" required />
+        </div>
 
-  <!-- Success / Error Feedback with Redirect -->
-  <script>
-    const form = document.getElementById("contactForm");
-    form.addEventListener("submit", async function(e) {
-      e.preventDefault();
-      const data = new FormData(form);
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-      if (response.ok) {
-        window.location.href = "thank-you.html";
-      } else {
-        alert("❌ Oops! Something went wrong. Please try again later.");
-      }
-    });
-  </script>
+        <div class="form-row two">
+          <div>
+            <label for="email">Email *</label>
+            <input id="email" type="email" name="email" autocomplete="email" required />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" name="phone" autocomplete="tel" />
+          </div>
+        </div>
+
+        <div class="form-row two">
+          <div>
+            <label for="city">City / Area</label>
+            <input id="city" type="text" name="city" placeholder="Boise, Meridian, etc." />
+          </div>
+          <div>
+            <label for="timeline">Timeline</label>
+            <select id="timeline" name="timeline">
+              <option value="">Select one</option>
+              <option>ASAP</option>
+              <option>This week</option>
+              <option>This month</option>
+              <option>Flexible</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="projectType">Project Type</label>
+          <select id="projectType" name="project_type">
+            <option value="">Select one</option>
+            <option>Repair / punch list</option>
+            <option>Mounting / install</option>
+            <option>Maintenance / yard cleanup</option>
+            <option>Home tech / smart-home setup</option>
+            <option>Custom project</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Project Details *</label>
+          <textarea id="message" name="message" required placeholder="Tell me what you need done. Include measurements, product links, or anything unusual if you can."></textarea>
+        </div>
+
+        <button class="btn btn-primary form-button" type="submit">Send Request</button>
+        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        <p class="form-note">This form uses Formspree. You can also email photos directly to <a href="mailto:handsonidaho@outlook.com">handsonidaho@outlook.com</a>.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+
+<section class="cta-strip">
+  <div class="container cta-strip-inner">
+    <div>
+      <p class="eyebrow">Ready when you are</p>
+      <h2>Have a repair, install, or punch-list project?</h2>
+      <p>Send the details and a few photos if you have them. I’ll let you know what I can help with and the best next step.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-light" href="contact.html">Request a Quote</a>
+      <a class="btn btn-ghost-light" href="tel:12088612302">Call/Text (208) 861-2302</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <img src="logo.png" alt="Hands-On Idaho logo" class="footer-logo" onerror="this.style.display='none';" />
+      <p class="footer-tagline">Reliable handyman and home improvement help for Boise, Meridian, and the Treasure Valley.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <a href="tel:12088612302">(208) 861-2302</a>
+      <a href="mailto:handsonidaho@outlook.com">handsonidaho@outlook.com</a>
+    </div>
+    <div>
+      <h3>Service Area</h3>
+      <p>Boise, Meridian, Eagle, Nampa, Kuna, Star, and nearby Treasure Valley areas.</p>
+    </div>
+    <div>
+      <h3>Social</h3>
+      <a href="https://www.instagram.com/handsonidaho" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61580497944298" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Hands-On Idaho. All rights reserved.</p>
+    <p>Locally owned. Clear communication. Quality work.</p>
+  </div>
+</footer>
+
+<a class="mobile-call" href="tel:12088612302">Call/Text (208) 861-2302</a>
 
 </body>
 </html>
