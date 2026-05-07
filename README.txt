@@ -30,7 +30,7 @@ This rebuild references those existing files.
 - Domain: `handsonidaho.com`
 - Phone: (208) 861-2302
 - Email: handsonidaho@outlook.com
-- Instagram and Facebook links
+- Instagram, Facebook, Nextdoor, and Google Business Profile links
 - Google Analytics ID: G-B5PNK5EFXL
 - Formspree contact form endpoint: https://formspree.io/f/mzzaloqw
 
