@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "photos:prepare": "powershell -ExecutionPolicy Bypass -File scripts/prepare-photos.ps1"
+  }
+}

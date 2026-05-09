@@ -649,6 +649,31 @@ p {
   text-decoration: underline;
 }
 
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.project-review-note {
+  margin-top: 12px;
+  font-size: 0.88rem;
+  font-weight: 850;
+}
+
 .portfolio-note {
   margin-top: 28px;
   padding: 32px;

@@ -5,7 +5,11 @@
     "service": "Home Improvement",
     "area": "Treasure Valley, ID",
     "description": "Local project example for small repairs, punch-list work, or home improvement help.",
-    "alt": "Hands-On Idaho home improvement project example in the Treasure Valley"
+    "alt": "Hands-On Idaho home improvement project example in the Treasure Valley",
+    "tags": ["Small Home Projects", "Home Improvement", "Treasure Valley"],
+    "featured": true,
+    "dateAdded": "2026-05-08",
+    "needsReview": false
   },
   {
     "image": "project2.JPG",
@@ -13,7 +17,11 @@
     "service": "TV Mounting and Installs",
     "area": "Treasure Valley, ID",
     "description": "Local project example for mounting, setup, organization, or clean home installs.",
-    "alt": "Hands-On Idaho mounting and install project example for a local homeowner"
+    "alt": "Hands-On Idaho mounting and install project example for a local homeowner",
+    "tags": ["TV Mounting", "Media Wall", "Treasure Valley"],
+    "featured": true,
+    "dateAdded": "2026-05-08",
+    "needsReview": false
   },
   {
     "image": "project3.jpeg",
@@ -21,6 +29,10 @@
     "service": "Maintenance",
     "area": "Treasure Valley, ID",
     "description": "Local project example for exterior maintenance, yard cleanup, or practical property help.",
-    "alt": "Hands-On Idaho maintenance and exterior project example in Idaho"
+    "alt": "Hands-On Idaho maintenance and exterior project example in Idaho",
+    "tags": ["Small Home Projects", "Maintenance", "Treasure Valley"],
+    "featured": true,
+    "dateAdded": "2026-05-08",
+    "needsReview": false
   }
 ]

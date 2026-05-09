@@ -1,6 +1,6 @@
 # Project Photo Workflow
 
-Add future real Hands-On Idaho project photos here when available.
+Optimized website-ready Hands-On Idaho project photos are created here by `scripts/prepare-photos.ps1`.
 
 Recommended naming:
 - `tv-mount-boise-living-room.webp`
@@ -11,8 +11,9 @@ Recommended naming:
 
 Use only real project photos you have permission to publish. Do not use stock photos or scraped social media images.
 
-When adding a new photo:
-1. Save the optimized image in this folder.
-2. Add a matching entry to `projects.json`.
-3. Add or update the visible card in `portfolio.html`.
-4. Use honest alt text that describes the actual photo, such as "Wall mounted TV installation in Meridian Idaho living room".
+Preferred workflow:
+1. Drop approved raw JPG or PNG photos into `photo-inbox/`.
+2. Run `powershell -ExecutionPolicy Bypass -File scripts/prepare-photos.ps1`.
+3. Review the generated `projects.json` entries.
+
+Use honest alt text that describes the actual photo, such as "Wall mounted TV installation in Meridian Idaho living room".
