@@ -23,6 +23,8 @@ Do not delete your existing image assets unless you are replacing them:
 - `project1.JPG`
 - `project2.JPG`
 - `project3.jpeg`
+- `projects.json`
+- `public/images/projects/`
 
 This rebuild references those existing files.
 
@@ -33,6 +35,12 @@ This rebuild references those existing files.
 - Instagram, Facebook, Nextdoor, and Google Business Profile links
 - Google Analytics ID: G-B5PNK5EFXL
 - Formspree contact form endpoint: https://formspree.io/f/mzzaloqw
+
+## Project photos
+- Current visible project cards use local images already in the repo.
+- Future real project photos should go in `public/images/projects/`.
+- Add matching metadata to `projects.json` and update the gallery cards in `portfolio.html`.
+- Use only real Hands-On Idaho project photos; do not use stock photos or scrape social media.
 
 ## Static-site checks
 - GitHub Pages should deploy from the `main` branch root so `index.html`, `CNAME`, `robots.txt`, and `sitemap.xml` are served at the domain root.

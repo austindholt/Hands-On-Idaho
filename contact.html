@@ -18,20 +18,20 @@
   gtag('config', 'G-B5PNK5EFXL');
 </script>
 
-<title>Contact Hands-On Idaho | Request a Boise Handyman Quote</title>
-<meta name="description" content="Request a quote from Hands-On Idaho for handyman repairs, installs, maintenance, small projects, and home tech help in Boise, Meridian, and the Treasure Valley." />
-<meta name="keywords" content="contact Boise handyman, request handyman quote, Hands-On Idaho phone, Treasure Valley home repair quote, Meridian handyman" />
+<title>Request a TV Mounting or Handyman Quote | Hands-On Idaho</title>
+<meta name="description" content="Request a local quote for TV mounting, soundbar setup, wire concealment, home theater setup, shelves, media consoles, and handyman help in Boise or Meridian." />
+<meta name="keywords" content="request TV mounting quote Boise, TV mounting estimate Meridian, handyman quote Boise, home theater setup quote, soundbar mounting Boise, wire concealment Boise" />
 <link rel="canonical" href="https://handsonidaho.com/contact.html" />
 <meta property="og:site_name" content="Hands-On Idaho" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:title" content="Contact | Hands-On Idaho" />
-<meta property="og:description" content="Request a quote for handyman repairs, home improvement, maintenance, mounting, installs, and tech-friendly home projects." />
+<meta property="og:title" content="Request a TV Mounting or Handyman Quote | Hands-On Idaho" />
+<meta property="og:description" content="Send details for TV mounting, soundbar setup, wire concealment, shelves, media consoles, home theater setup, or a small home project." />
 <meta property="og:image" content="https://handsonidaho.com/og-image.png" />
 <meta property="og:url" content="https://handsonidaho.com/contact.html" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Contact | Hands-On Idaho" />
-<meta name="twitter:description" content="Send project details, photos, location, and timing for a Boise or Treasure Valley handyman quote." />
+<meta name="twitter:title" content="Request a TV Mounting or Handyman Quote | Hands-On Idaho" />
+<meta name="twitter:description" content="Send project details, photos, location, TV size, wall type, and timing for a Boise or Treasure Valley quote." />
 </head>
 
 <body>
@@ -80,8 +80,8 @@
   <section class="page-hero">
     <div class="container narrow">
       <p class="eyebrow">Request a quote</p>
-      <h1>Tell me what you need help with.</h1>
-      <p>Send the details, your location, and any photos you have. I’ll get back to you with questions, availability, and the best next step.</p>
+      <h1>Request a quote for TV mounting or a home project.</h1>
+      <p>Send the details, your location, and any photos you have. For TV mounting, include the TV size, wall type if known, mount details, and whether you want wires hidden.</p>
     </div>
   </section>
 
@@ -89,7 +89,7 @@
     <div class="container contact-grid">
       <div class="contact-card">
         <h2>Contact Details</h2>
-        <p>Call, text, email, or use the form. Photos are usually the fastest way to get a useful answer.</p>
+        <p>Call, text, email, or use the form. Photos of the wall, outlet area, TV, mount, shelves, or equipment are usually the fastest way to get a useful answer.</p>
         <div class="contact-methods">
           <a href="tel:12088612302"><span>Phone/Text</span>(208) 861-2302</a>
           <a href="mailto:handsonidaho@outlook.com"><span>Email</span>handsonidaho@outlook.com</a>
@@ -102,6 +102,7 @@
             <li>What you need done</li>
             <li>City or neighborhood</li>
             <li>Photos of the project area</li>
+            <li>For TV mounting: TV size, wall type, mount status, and whether wires should be hidden</li>
             <li>Any measurements or product links</li>
             <li>How soon you need it done</li>
           </ul>
@@ -109,7 +110,8 @@
       </div>
 
       <form id="contactForm" action="https://formspree.io/f/mzzaloqw" method="POST" class="quote-form">
-        <input type="hidden" name="_subject" value="New Hands-On Idaho quote request" />
+        <input type="hidden" name="_subject" value="New Hands-On Idaho TV mounting or home project quote request" />
+        <input type="hidden" name="_next" value="https://handsonidaho.com/thank-you.html" />
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="honeypot" aria-hidden="true" />
         <div class="form-row">
           <label for="name">Name *</label>
@@ -133,6 +135,19 @@
             <input id="city" type="text" name="city" autocomplete="address-level2" placeholder="Boise, Meridian, etc." required />
           </div>
           <div>
+            <label for="preferredContact">Preferred Contact</label>
+            <select id="preferredContact" name="preferred_contact">
+              <option value="">Select one</option>
+              <option>Text</option>
+              <option>Call</option>
+              <option>Email</option>
+              <option>No preference</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row two">
+          <div>
             <label for="timeline">Timeline</label>
             <select id="timeline" name="timeline">
               <option value="">Select one</option>
@@ -142,12 +157,21 @@
               <option>Flexible</option>
             </select>
           </div>
+          <div>
+            <label for="tvSize">TV Size / Project Size</label>
+            <input id="tvSize" type="text" name="tv_size_or_project_size" placeholder="65-inch TV, 72-inch shelf, etc." />
+          </div>
         </div>
 
         <div class="form-row">
           <label for="projectType">Project Type *</label>
           <select id="projectType" name="project_type" required>
             <option value="">Select one</option>
+            <option>TV mounting / TV installation</option>
+            <option>Soundbar / speaker setup</option>
+            <option>Wire concealment / cord cleanup</option>
+            <option>Home theater / media wall setup</option>
+            <option>Shelves / media console install</option>
             <option>Repair / punch list</option>
             <option>Mounting / install</option>
             <option>Maintenance / yard cleanup</option>
@@ -159,12 +183,12 @@
 
         <div class="form-row">
           <label for="message">Project Details *</label>
-          <textarea id="message" name="message" required placeholder="Tell me what you need done. Include photos you can email later, measurements, product links, access notes, parking/gate details, or anything unusual."></textarea>
+          <textarea id="message" name="message" required placeholder="Tell me what you need done. For TV mounting, include wall type if known, whether you already have a mount, whether wires should be hidden, outlet location, and any soundbar, speakers, shelves, or media console details."></textarea>
         </div>
 
-        <button class="btn btn-primary form-button" type="submit">Request a Quote</button>
+        <button class="btn btn-primary form-button" type="submit">Request My Estimate</button>
         <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
-        <p class="form-note">This form sends through Formspree. For faster quoting, email photos directly to <a href="mailto:handsonidaho@outlook.com">handsonidaho@outlook.com</a> after submitting.</p>
+        <p class="form-note">This form sends through Formspree. For faster quoting, text photos to <a href="tel:12088612302">(208) 861-2302</a> or email them to <a href="mailto:handsonidaho@outlook.com">handsonidaho@outlook.com</a> after submitting.</p>
       </form>
     </div>
   </section>

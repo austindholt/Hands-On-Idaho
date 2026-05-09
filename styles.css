@@ -637,6 +637,18 @@ p {
   color: var(--muted);
 }
 
+.text-link {
+  display: inline-flex;
+  margin-top: 12px;
+  color: var(--blue);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
 .portfolio-note {
   margin-top: 28px;
   padding: 32px;

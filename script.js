@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.textContent = "Sending...";
       }
 
-      status.textContent = "Sending your request securely...";
+      status.textContent = "Sending your request. After it goes through, you can text photos to (208) 861-2302 for a faster estimate.";
       status.className = "form-status";
     });
   }
