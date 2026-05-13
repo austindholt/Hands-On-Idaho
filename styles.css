@@ -642,6 +642,15 @@ p {
   object-fit: cover;
 }
 
+.project-lightbox-trigger {
+  cursor: zoom-in;
+}
+
+.project-lightbox-trigger:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: -3px;
+}
+
 .project-content {
   padding: 24px;
 }
@@ -663,6 +672,97 @@ p {
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid var(--line);
+}
+
+.lightbox-open {
+  overflow: hidden;
+}
+
+.project-lightbox[hidden] {
+  display: none;
+}
+
+.project-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.project-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 24, 51, 0.86);
+}
+
+.project-lightbox-dialog {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  width: min(100%, 1040px);
+  gap: 16px;
+}
+
+.project-lightbox-figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
+}
+
+.project-lightbox-figure img {
+  display: block;
+  width: 100%;
+  max-height: min(76vh, 760px);
+  object-fit: contain;
+  background: #081324;
+}
+
+.project-lightbox-figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.project-lightbox-close,
+.project-lightbox-nav {
+  border: 0;
+  cursor: pointer;
+  background: var(--white);
+  color: var(--navy);
+  font-weight: 950;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+}
+
+.project-lightbox-close {
+  position: absolute;
+  top: -52px;
+  right: 0;
+  min-height: 40px;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+.project-lightbox-nav {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  font-size: 1.35rem;
+}
+
+.project-lightbox-close:focus-visible,
+.project-lightbox-nav:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
 }
 
 .text-link {
@@ -1054,6 +1154,46 @@ textarea:focus {
   .thank-card,
   .hero-card {
     padding: 24px;
+  }
+
+  .project-lightbox {
+    padding: 14px;
+  }
+
+  .project-lightbox-dialog {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .project-lightbox-close {
+    position: static;
+    justify-self: end;
+    order: -2;
+  }
+
+  .project-lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+  }
+
+  .project-lightbox-prev {
+    left: 8px;
+  }
+
+  .project-lightbox-next {
+    right: 8px;
+  }
+
+  .project-lightbox-figure img {
+    max-height: 70vh;
+  }
+
+  .project-lightbox-figure figcaption {
+    flex-direction: column;
+    gap: 4px;
   }
 
   .mobile-call {
