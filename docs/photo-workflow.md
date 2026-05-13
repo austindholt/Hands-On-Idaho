@@ -54,6 +54,8 @@ Set `"featured": false` on any photo that should stay in the full gallery but no
 
 Set `"hidden": true` on any photo that should not be shown publicly.
 
+Important: the homepage and portfolio also include static fallback cards for the most important recent work. After adding a strong new project, update the static cards in `index.html` and `portfolio.html` so the best work is visible immediately to visitors and search engines, even before JavaScript loads.
+
 ## Group Similar Photos
 
 If multiple photos belong to the same job, keep them under one project entry with an `images` array instead of creating one card per photo. The first image is used as the main card image and the remaining images show as thumbnails.
