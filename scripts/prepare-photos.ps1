@@ -20,7 +20,19 @@ if (-not (Test-Path $manifestPath)) {
   "[]" | Set-Content -Path $manifestPath -Encoding UTF8
 }
 
-$projects = @(Get-Content $manifestPath -Raw | ConvertFrom-Json)
+$loadedProjects = Get-Content $manifestPath -Raw | ConvertFrom-Json
+$projects = New-Object System.Collections.Generic.List[object]
+foreach ($project in @($loadedProjects)) {
+  if ($project.PSObject.Properties.Name -contains "image") {
+    $projects.Add($project)
+  } elseif ($project.PSObject.Properties.Name -contains "value") {
+    foreach ($nestedProject in @($project.value)) {
+      if ($nestedProject.PSObject.Properties.Name -contains "image") {
+        $projects.Add($nestedProject)
+      }
+    }
+  }
+}
 $existingSources = @{}
 foreach ($project in $projects) {
   if ($project.sourceFile) {
@@ -120,6 +132,15 @@ function Save-OptimizedJpeg {
 
   $source = [System.Drawing.Image]::FromFile($InputPath)
   try {
+    if ($source.PropertyIdList -contains 274) {
+      $orientation = $source.GetPropertyItem(274).Value[0]
+      switch ($orientation) {
+        3 { $source.RotateFlip([System.Drawing.RotateFlipType]::Rotate180FlipNone) }
+        6 { $source.RotateFlip([System.Drawing.RotateFlipType]::Rotate90FlipNone) }
+        8 { $source.RotateFlip([System.Drawing.RotateFlipType]::Rotate270FlipNone) }
+      }
+    }
+
     $ratio = [Math]::Min($maxWidth / $source.Width, $maxHeight / $source.Height)
     if ($ratio -gt 1) { $ratio = 1 }
     $width = [Math]::Max(1, [int]($source.Width * $ratio))
@@ -191,8 +212,10 @@ foreach ($file in $files) {
 }
 
 if ($added.Count) {
-  $projects = @($projects) + @($added)
-  $projects | ConvertTo-Json -Depth 6 | Set-Content -Path $manifestPath -Encoding UTF8
+  foreach ($project in $added.ToArray()) {
+    $projects.Add($project)
+  }
+  $projects.ToArray() | ConvertTo-Json -Depth 6 | Set-Content -Path $manifestPath -Encoding UTF8
   Write-Host "Updated projects.json with $($added.Count) new project photo(s)."
   Write-Host "Review entries marked needsReview=true before relying on their titles, descriptions, or alt text."
 } else {

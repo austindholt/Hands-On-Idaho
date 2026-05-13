@@ -34,5 +34,31 @@
     "featured": true,
     "dateAdded": "2026-05-08",
     "needsReview": false
+  },
+  {
+    "image": "public/images/projects/tv-mount-soundbar-console-treasure-valley-1.jpg",
+    "title": "TV Mounting With Soundbar Console Setup",
+    "service": "TV Mounting",
+    "area": "Treasure Valley, ID",
+    "description": "Wall-mounted TV setup with a soundbar and media console for a residential room.",
+    "alt": "Wall mounted TV and soundbar setup for a Treasure Valley homeowner",
+    "tags": ["TV Mounting", "Soundbar Setup", "Home Theater", "Treasure Valley"],
+    "featured": true,
+    "dateAdded": "2026-05-12",
+    "needsReview": true,
+    "sourceFile": "IMG_0122-1.jpeg"
+  },
+  {
+    "image": "public/images/projects/tv-mount-soundbar-shelf-treasure-valley-2.jpg",
+    "title": "Mounted TV With Soundbar and Media Shelf",
+    "service": "TV Mounting",
+    "area": "Treasure Valley, ID",
+    "description": "Residential TV mounting project with soundbar placement and a compact media shelf.",
+    "alt": "Mounted TV with soundbar and media shelf for a Treasure Valley homeowner",
+    "tags": ["TV Mounting", "Soundbar Setup", "Media Wall", "Treasure Valley"],
+    "featured": true,
+    "dateAdded": "2026-05-12",
+    "needsReview": true,
+    "sourceFile": "IMG_0169-1.jpeg"
   }
 ]
