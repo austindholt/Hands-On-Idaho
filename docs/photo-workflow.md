@@ -54,6 +54,35 @@ Set `"featured": false` on any photo that should stay in the full gallery but no
 
 Set `"hidden": true` on any photo that should not be shown publicly.
 
+## Group Similar Photos
+
+If multiple photos belong to the same job, keep them under one project entry with an `images` array instead of creating one card per photo. The first image is used as the main card image and the remaining images show as thumbnails.
+
+Example:
+
+```json
+{
+  "title": "Frame TV and Soundbar Setup",
+  "service": "TV Mounting",
+  "area": "Treasure Valley, ID",
+  "description": "Before, in-progress, and finished photos from a residential Frame TV mounting project.",
+  "tags": ["TV Mounting", "Soundbar Setup", "Before & After"],
+  "featured": true,
+  "needsReview": true,
+  "images": [
+    {
+      "image": "public/images/projects/frame-tv-mount-before-treasure-valley.jpg",
+      "alt": "Before photo showing wall mount placement for a Frame TV setup"
+    },
+    {
+      "image": "public/images/projects/frame-tv-soundbar-finished-treasure-valley.jpg",
+      "alt": "Finished Frame TV and soundbar mounting setup"
+    }
+  ],
+  "sourceFiles": ["IMG_7172-1.heic", "IMG_7178-1.heic"]
+}
+```
+
 ## Photo Categories
 
 Use residential homeowner-friendly tags such as:

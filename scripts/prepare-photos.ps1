@@ -38,6 +38,11 @@ foreach ($project in $projects) {
   if ($project.sourceFile) {
     $existingSources[$project.sourceFile] = $true
   }
+  if ($project.sourceFiles) {
+    foreach ($sourceFile in @($project.sourceFiles)) {
+      $existingSources[$sourceFile] = $true
+    }
+  }
 }
 
 $files = @(Get-ChildItem -Path $inboxDir -File | Where-Object { $_.Name -ne ".gitkeep" })

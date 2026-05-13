@@ -51,7 +51,7 @@ async function initProjectGalleries() {
     }
 
     const projects = (await response.json()).filter((project) => {
-      return project && project.image && project.hidden !== true;
+      return project && getProjectImages(project).length && project.hidden !== true;
     });
 
     if (!projects.length) {
@@ -98,12 +98,14 @@ function createProjectCard(project) {
   const article = document.createElement("article");
   article.className = "project-card";
 
+  const images = getProjectImages(project);
+  const primaryImage = images[0];
   const imageWrap = document.createElement("div");
   imageWrap.className = "project-image-wrap";
 
   const image = document.createElement("img");
-  image.src = project.image;
-  image.alt = project.alt || `${project.title || "Hands-On Idaho project"} in ${project.area || "the Treasure Valley"}`;
+  image.src = primaryImage.image;
+  image.alt = primaryImage.alt || project.alt || `${project.title || "Hands-On Idaho project"} in ${project.area || "the Treasure Valley"}`;
   image.loading = "lazy";
   image.addEventListener("error", () => {
     imageWrap.classList.add("missing-image");
@@ -111,6 +113,12 @@ function createProjectCard(project) {
   });
 
   imageWrap.append(image);
+  if (images.length > 1) {
+    const count = document.createElement("span");
+    count.className = "project-photo-count";
+    count.textContent = `${images.length} photos`;
+    imageWrap.append(count);
+  }
 
   const content = document.createElement("div");
   content.className = "project-content";
@@ -126,6 +134,19 @@ function createProjectCard(project) {
   description.textContent = project.description || "Real Hands-On Idaho project photo from around the Treasure Valley.";
 
   content.append(eyebrow, title, description);
+
+  if (images.length > 1) {
+    const thumbnails = document.createElement("div");
+    thumbnails.className = "project-thumbnails";
+    images.slice(1, 5).forEach((projectImage) => {
+      const thumb = document.createElement("img");
+      thumb.src = projectImage.image;
+      thumb.alt = projectImage.alt || project.alt || `${project.title || "Hands-On Idaho project"} photo`;
+      thumb.loading = "lazy";
+      thumbnails.append(thumb);
+    });
+    content.append(thumbnails);
+  }
 
   if (Array.isArray(project.tags) && project.tags.length) {
     const tags = document.createElement("div");
@@ -154,4 +175,20 @@ function createProjectCard(project) {
 
   article.append(imageWrap, content);
   return article;
+}
+
+function getProjectImages(project) {
+  if (Array.isArray(project.images) && project.images.length) {
+    return project.images.filter((image) => image && image.image);
+  }
+
+  if (project.image) {
+    return [{
+      image: project.image,
+      alt: project.alt,
+      caption: project.title
+    }];
+  }
+
+  return [];
 }

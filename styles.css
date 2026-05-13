@@ -612,6 +612,19 @@ p {
   position: relative;
 }
 
+.project-photo-count {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 1;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(7, 24, 51, 0.86);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
 .project-image-wrap.missing-image::after {
   content: "Add project photo";
   position: absolute;
@@ -635,6 +648,21 @@ p {
 
 .project-content p:not(.eyebrow) {
   color: var(--muted);
+}
+
+.project-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.project-thumbnails img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
 }
 
 .text-link {
