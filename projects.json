@@ -60,5 +60,44 @@
     "dateAdded": "2026-05-12",
     "needsReview": true,
     "sourceFile": "IMG_0169-1.jpeg"
+  },
+  {
+    "image": "public/images/projects/frame-tv-mount-before-treasure-valley.jpg",
+    "title": "Frame TV Mount Prep",
+    "service": "TV Mounting",
+    "area": "Treasure Valley, ID",
+    "description": "Before-stage photo showing wall mount placement for a residential Frame TV and soundbar setup.",
+    "alt": "Frame TV wall mount prep with soundbar setup for a Treasure Valley homeowner",
+    "tags": ["TV Mounting", "Soundbar Setup", "Home Theater", "Before & After", "Treasure Valley"],
+    "featured": true,
+    "dateAdded": "2026-05-12",
+    "needsReview": true,
+    "sourceFile": "IMG_7172-1.heic"
+  },
+  {
+    "image": "public/images/projects/frame-tv-mount-in-progress-treasure-valley.jpg",
+    "title": "Frame TV Mounting In Progress",
+    "service": "TV Mounting",
+    "area": "Treasure Valley, ID",
+    "description": "In-progress residential TV mounting photo with soundbar and media shelf placement.",
+    "alt": "Frame TV mounting in progress with soundbar and media shelf in the Treasure Valley",
+    "tags": ["TV Mounting", "Soundbar Setup", "Media Wall", "Before & After", "Treasure Valley"],
+    "featured": true,
+    "dateAdded": "2026-05-12",
+    "needsReview": true,
+    "sourceFile": "IMG_7173-1.heic"
+  },
+  {
+    "image": "public/images/projects/frame-tv-soundbar-finished-treasure-valley.jpg",
+    "title": "Finished Frame TV and Soundbar Setup",
+    "service": "TV Mounting",
+    "area": "Treasure Valley, ID",
+    "description": "Finished Frame TV mounting project with soundbar and media shelf for a residential room.",
+    "alt": "Finished Frame TV and soundbar mounting setup for a Treasure Valley homeowner",
+    "tags": ["TV Mounting", "Soundbar Setup", "Home Theater", "Media Wall", "Treasure Valley"],
+    "featured": true,
+    "dateAdded": "2026-05-12",
+    "needsReview": true,
+    "sourceFile": "IMG_7178-1.heic"
   }
 ]

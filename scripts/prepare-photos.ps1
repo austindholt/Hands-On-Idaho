@@ -178,11 +178,21 @@ function Save-HeicOptimizedJpegWithImageMagick {
   )
 
   $magick = Get-Command magick -ErrorAction SilentlyContinue
-  if (-not $magick) {
+  $magickPath = $null
+  if ($magick) {
+    $magickPath = $magick.Source
+  } else {
+    $standardInstall = Get-ChildItem -Path "$env:ProgramFiles\ImageMagick-*" -Filter magick.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($standardInstall) {
+      $magickPath = $standardInstall.FullName
+    }
+  }
+
+  if (-not $magickPath) {
     return $false
   }
 
-  & $magick.Source $InputPath -auto-orient -resize "$($maxWidth)x$($maxHeight)>" -strip -quality $jpegQuality $OutputPath
+  & $magickPath $InputPath -auto-orient -resize "$($maxWidth)x$($maxHeight)>" -strip -quality $jpegQuality $OutputPath
   if ($LASTEXITCODE -ne 0) {
     throw "ImageMagick failed to convert $InputPath"
   }
