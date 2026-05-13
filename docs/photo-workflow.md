@@ -23,7 +23,9 @@ If you have npm installed, this also works:
 npm run photos:prepare
 ```
 
-The script scans `photo-inbox/`, ignores unsupported files, resizes JPG/PNG images to a website-friendly size, saves optimized JPEG files in `public/images/projects/`, strips metadata by redrawing the image, avoids overwriting existing processed photos, and appends new entries to `projects.json`.
+The script scans `photo-inbox/`, ignores unsupported files, resizes JPG/PNG/HEIC/HEIF images to a website-friendly size, saves optimized JPEG files in `public/images/projects/`, strips metadata by redrawing or re-encoding the image, avoids overwriting existing processed photos, and appends new entries to `projects.json`.
+
+HEIC/HEIF support uses ImageMagick if `magick` is installed. If ImageMagick is not installed, it tries the Windows HEIF codec. If neither is available, export the iPhone photo as JPEG or install one of those decoders.
 
 ## Manual Review
 
@@ -71,4 +73,4 @@ Do not publish photos that show customer addresses, license plates, faces withou
 
 ## Notes
 
-The script uses built-in Windows image tools through PowerShell. It does not require private credentials or external accounts. It creates optimized JPEG files rather than WebP because the current repo has no Node/npm image tooling installed.
+The script uses local Windows/PowerShell image tools and optional local ImageMagick support. It does not require private credentials or external accounts. It creates optimized JPEG files rather than WebP because the current repo has no Node/npm image tooling installed.

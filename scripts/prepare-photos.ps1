@@ -8,7 +8,7 @@ $repoRoot = Resolve-Path (Join-Path $PSScriptRoot "..")
 $inboxDir = Join-Path $repoRoot "photo-inbox"
 $outputDir = Join-Path $repoRoot "public\images\projects"
 $manifestPath = Join-Path $repoRoot "projects.json"
-$supportedExtensions = @(".jpg", ".jpeg", ".png")
+$supportedExtensions = @(".jpg", ".jpeg", ".png", ".heic", ".heif")
 $maxWidth = 1600
 $maxHeight = 1200
 $jpegQuality = 82L
@@ -171,6 +171,92 @@ function Save-OptimizedJpeg {
   }
 }
 
+function Save-HeicOptimizedJpegWithImageMagick {
+  param(
+    [string]$InputPath,
+    [string]$OutputPath
+  )
+
+  $magick = Get-Command magick -ErrorAction SilentlyContinue
+  if (-not $magick) {
+    return $false
+  }
+
+  & $magick.Source $InputPath -auto-orient -resize "$($maxWidth)x$($maxHeight)>" -strip -quality $jpegQuality $OutputPath
+  if ($LASTEXITCODE -ne 0) {
+    throw "ImageMagick failed to convert $InputPath"
+  }
+
+  return $true
+}
+
+function Save-HeicOptimizedJpegWithWindowsCodec {
+  param(
+    [string]$InputPath,
+    [string]$OutputPath
+  )
+
+  Add-Type -AssemblyName PresentationCore
+  Add-Type -AssemblyName WindowsBase
+
+  $stream = [System.IO.File]::OpenRead($InputPath)
+  try {
+    $decoder = [System.Windows.Media.Imaging.BitmapDecoder]::Create(
+      $stream,
+      [System.Windows.Media.Imaging.BitmapCreateOptions]::PreservePixelFormat,
+      [System.Windows.Media.Imaging.BitmapCacheOption]::OnLoad
+    )
+    $frame = $decoder.Frames[0]
+
+    $ratio = [Math]::Min($maxWidth / $frame.PixelWidth, $maxHeight / $frame.PixelHeight)
+    if ($ratio -gt 1) { $ratio = 1 }
+
+    $source = $frame
+    if ($ratio -lt 1) {
+      $source = New-Object System.Windows.Media.Imaging.TransformedBitmap(
+        $frame,
+        (New-Object System.Windows.Media.ScaleTransform($ratio, $ratio))
+      )
+    }
+
+    $encoder = New-Object System.Windows.Media.Imaging.JpegBitmapEncoder
+    $encoder.QualityLevel = [int]$jpegQuality
+    $encoder.Frames.Add([System.Windows.Media.Imaging.BitmapFrame]::Create($source))
+
+    $outStream = [System.IO.File]::Create($OutputPath)
+    try {
+      $encoder.Save($outStream)
+    } finally {
+      $outStream.Dispose()
+    }
+  } finally {
+    $stream.Dispose()
+  }
+}
+
+function Save-WebsiteJpeg {
+  param(
+    [System.IO.FileInfo]$File,
+    [string]$OutputPath
+  )
+
+  $extension = $File.Extension.ToLowerInvariant()
+  if ($extension -in @(".heic", ".heif")) {
+    if (Save-HeicOptimizedJpegWithImageMagick -InputPath $File.FullName -OutputPath $OutputPath) {
+      return
+    }
+
+    try {
+      Save-HeicOptimizedJpegWithWindowsCodec -InputPath $File.FullName -OutputPath $OutputPath
+      return
+    } catch {
+      throw "Could not decode $($File.Name). Install ImageMagick or the Microsoft HEIF Image Extensions, or export this photo from iPhone/iCloud as JPEG."
+    }
+  }
+
+  Save-OptimizedJpeg -InputPath $File.FullName -OutputPath $OutputPath
+}
+
 $added = New-Object System.Collections.Generic.List[object]
 
 foreach ($file in $files) {
@@ -187,7 +273,15 @@ foreach ($file in $files) {
   $datePrefix = $file.LastWriteTime.ToString("yyyy-MM-dd")
   $slug = Convert-ToSlug $file.BaseName
   $outputPath = Get-UniqueOutputPath "$datePrefix-$slug"
-  Save-OptimizedJpeg -InputPath $file.FullName -OutputPath $outputPath
+  try {
+    Save-WebsiteJpeg -File $file -OutputPath $outputPath
+  } catch {
+    if (Test-Path $outputPath) {
+      Remove-Item -LiteralPath $outputPath -Force
+    }
+    Write-Host $_
+    continue
+  }
 
   $relativeImage = "public/images/projects/$([System.IO.Path]::GetFileName($outputPath))"
   $serviceInfo = Get-ServiceTags $file.BaseName

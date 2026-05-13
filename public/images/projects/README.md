@@ -12,7 +12,7 @@ Recommended naming:
 Use only real project photos you have permission to publish. Do not use stock photos or scraped social media images.
 
 Preferred workflow:
-1. Drop approved raw JPG or PNG photos into `photo-inbox/`.
+1. Drop approved raw JPG, PNG, HEIC, or HEIF photos into `photo-inbox/`.
 2. Run `powershell -ExecutionPolicy Bypass -File scripts/prepare-photos.ps1`.
 3. Review the generated `projects.json` entries.
 
